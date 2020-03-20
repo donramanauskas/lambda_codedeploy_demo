@@ -15,5 +15,5 @@ phases:
         - ls -al
 artifacts:
   files:
-    - '.aws-sam/build'
+    - 'lambda_codedeploy_demo/.aws-sam/build'
   name: bbdartifact
