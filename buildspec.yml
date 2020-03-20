@@ -7,13 +7,12 @@ phases:
       commands:
         - echo Build started on `date`
         - sam build
-        - sam local invoke
     post_build:
       commands:
         - echo Build completed on `date`
-        - pwd
+        - sam package --output-template-file packaged.yaml
         - ls -al
 artifacts:
+  type: zip
   files:
-    - '/codebuild/output/src095249704/src/github.com/donramanauskas/lambda_codedeploy_demo/.aws-sam/build/**'
-  name: bbdartifact
+    - packaged.yaml
