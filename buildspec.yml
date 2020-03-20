@@ -13,4 +13,6 @@ phases:
         - pwd
         - ls -al
   artifacts:
-    - '**/*'
+    files:
+      - '**/*'
+    name: bbdartifact
