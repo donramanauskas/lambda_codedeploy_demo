@@ -6,8 +6,6 @@ phases:
     build:
       commands:
         - echo Build started on `date`
-        - USER_BASE_PATH=$(python -m site --user-base)
-        - export PATH=$PATH:$USER_BASE_PATH/bin
         - sam build
     post_build:
       commands:
@@ -17,4 +15,4 @@ phases:
 artifacts:
   type: zip
   files:
-    - CODEBUILD_SRC_DIR
+    - '**/*'
