@@ -10,7 +10,7 @@ Resources:
     Properties:
       CodeUri: demo_lambda/
       Handler: lambda_function.lambda_handler
-      Runtime: python3.6
+      Runtime: python3.7
       Environment:
         Variables:
           var1: "some-val"

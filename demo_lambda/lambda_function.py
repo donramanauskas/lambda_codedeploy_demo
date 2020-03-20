@@ -1,4 +1,8 @@
+import boto3
+
+client = boto3.client('ecr')
 
 
-def lambda_handler(evemt, context):
-    return "Hello from lamda"
+def lambda_handler(event, context):
+    response = client.describe_repositories()['repositories'][0]['repositoryName']
+    print(response)
