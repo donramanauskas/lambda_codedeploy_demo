@@ -7,6 +7,7 @@ phases:
       commands:
         - echo Build started on `date`
         - pip install -r demo_lambda/requirements.txt
+        - sam build --use-container
     post_build:
       commands:
         - echo Build completed on `date`
