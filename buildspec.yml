@@ -7,6 +7,7 @@ phases:
       commands:
         - echo Build started on `date`
         - sam build
+        - cp .aws-sam/build .
     post_build:
       commands:
         - echo Build completed on `date`
