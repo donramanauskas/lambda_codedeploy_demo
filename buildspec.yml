@@ -5,15 +5,11 @@ phases:
       python: 3.7
     build:
       commands:
-        - echo Build started on `date`
         - sam build
-        - cp .aws-sam/build .
     post_build:
       commands:
-        - echo Build completed on `date`
-        - sam package --output-template-file packaged.yaml --s3-bucket aws-sam-cli-managed-default-samclisourcebucket-10mxe3shgahk2
         - ls -al
 artifacts:
   type: zip
   files:
-    - '.'
+    - '**/*'
