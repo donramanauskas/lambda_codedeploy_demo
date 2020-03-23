@@ -6,4 +6,4 @@ class LambdaTests(TestCase):
 
     def test_lambda_handler(self):
         result = lambda_handler(event="", context="")
-        self.assertEquals(result, "Hello Lambda")
+        self.assertEqual(result, "Hello Lambda")
