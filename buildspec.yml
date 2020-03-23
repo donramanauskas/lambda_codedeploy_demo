@@ -12,5 +12,6 @@ phases:
         - "ls -al"
 artifacts:
   type: zip
+  base-directory: "$CODEBUILD_SRC_DIR/demo_lambda/.aws-sam/"
   files:
-    - '$CODEBUILD_SRC_DIR/demo_lambda/.aws-sam/build/DemoLambda/*'
+    - '**/*'
