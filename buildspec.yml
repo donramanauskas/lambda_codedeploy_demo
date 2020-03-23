@@ -5,9 +5,9 @@ phases:
       python: 3.7
     build:
       commands:
-        - "cd $CODEBUILD_SRC_DIR"
-        - "ls -al"
-        - "sam build"
+        - "mkdir .aws-sam"
+        - "cd .aws/sam"
+        - "touch file12.txt"
     post_build:
       commands:
         - "cd $CODEBUILD_SRC_DIR"
