@@ -6,7 +6,7 @@ phases:
   pre_build:
     commands:
       - python setup.py install
-      - python -m unittest discover tests
+      - "python -m unittest discover tests"
   build:
     commands:
       - sam build
