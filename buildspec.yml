@@ -6,6 +6,7 @@ phases:
   pre_build:
     commands:
       - "python setup.py install"
+      - "cd demo_lambda"
       - "python -m unittest discover tests"
   build:
     commands:
