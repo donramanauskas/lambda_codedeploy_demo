@@ -11,6 +11,6 @@ phases:
       - ls -al
 artifacts:
   type: zip
-  base-directory: $CODEBUILD_SRC_DIR
+  base-directory: $CODEBUILD_SRC_DIR/.aws-sam/build
   files:
     - '**/*'
