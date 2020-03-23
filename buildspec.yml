@@ -5,16 +5,12 @@ phases:
       python: 3.7
     build:
       commands:
-        - "cd $CODEBUILD_SRC_DIR"
-        - "mkdir .aws-sam"
-        - "cd .aws-sam"
-        - "touch file12.txt"
+        - "sam build"
     post_build:
       commands:
-        - "cd $CODEBUILD_SRC_DIR"
         - "ls -al"
 artifacts:
   type: zip
-  base-directory: "$CODEBUILD_SRC_DIR/.aws-sam"
+  base-directory: "$CODEBUILD_SRC_DIR"
   files:
     - '**/*'
