@@ -5,6 +5,7 @@ phases:
       python: 3.7
     build:
       commands:
+        - "echo $CODEBUILD_SRC_DIR"
         - "sam build"
     post_build:
       commands:
@@ -12,4 +13,4 @@ phases:
 artifacts:
   type: zip
   files:
-    - '$CODEBUILD_SRC_DIR/.aws-sam/build'
+    - '$CODEBUILD_SRC_DIR/**'
