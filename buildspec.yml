@@ -12,4 +12,4 @@ phases:
 artifacts:
   type: zip
   files:
-    - '*/.aws-sam/build'
+    - '$CODEBUILD_SRC_DIR/.aws-sam/build'
