@@ -5,10 +5,10 @@ phases:
       python: 3.7
     build:
       commands:
-        - "sam build"
+        - sam build
     post_build:
       commands:
-        - "ls -al"
+        - ls -al
 artifacts:
   type: zip
   base-directory: $CODEBUILD_SRC_DIR
