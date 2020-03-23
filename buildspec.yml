@@ -5,7 +5,7 @@ phases:
       python: 3.7
     build:
       commands:
-        - "echo $CODEBUILD_SRC_DIR"
+        - "cd $CODEBUILD_SRC_DIR"
         - "sam build"
     post_build:
       commands:
