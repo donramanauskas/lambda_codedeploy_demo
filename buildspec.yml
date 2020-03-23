@@ -4,7 +4,8 @@ phases:
     runtime-versions:
       python: 3.7
   pre_build:
-    - python -m unittest discover tests
+    commands:
+      - python -m unittest discover tests
   build:
     commands:
       - sam build
