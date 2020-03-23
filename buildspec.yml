@@ -9,12 +9,13 @@ phases:
       - "cd demo_lambda"
       - "pip install -r requirements.txt"
       - "python -m unittest discover tests"
+      - "cd .."
   build:
     commands:
-      - sam build
+      - "sam build"
   post_build:
     commands:
-      - ls -al
+      - "ls -al"
 artifacts:
   type: zip
   base-directory: $CODEBUILD_SRC_DIR/.aws-sam/build/DemoLambda
