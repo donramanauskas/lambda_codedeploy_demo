@@ -7,6 +7,7 @@ phases:
     commands:
       - "python setup.py install"
       - "cd demo_lambda"
+      - "pip install -r requirements.txt"
       - "python -m unittest discover tests"
   build:
     commands:
