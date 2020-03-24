@@ -9,7 +9,7 @@ def create_elasticsearch_index(author, text):
         'timestamp': datetime.now(),
     }
     res = es.index(index="test-index", id=1, body=doc)
-    print(res['result'])
+    return res['result']
 
 
 def lambda_handler(event, context):
