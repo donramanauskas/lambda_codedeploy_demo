@@ -1,0 +1,9 @@
+version: 0.0
+Resources:
+  - demoLambda:
+      Type: AWS::Lambda::Function
+      Properties:
+        Name: "demoFunction"
+        Alias: "demoFunctionAlias"
+        CurrentVersion: "1"
+        TargetVersion: "2"
