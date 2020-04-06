@@ -20,4 +20,4 @@ phases:
 artifacts:
   type: zip
   files:
-    - '**/*'
+    - packaged.yaml
