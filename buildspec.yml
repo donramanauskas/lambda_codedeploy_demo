@@ -21,3 +21,4 @@ artifacts:
   type: zip
   files:
     - packaged.yaml
+    - AppSpec.yml
