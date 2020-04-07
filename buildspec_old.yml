@@ -15,9 +15,10 @@ phases:
       - "sam build"
   post_build:
     commands:
+      - "sam package --output-template-file packaged.yaml --s3-bucket codebuild-deployment-bucket-l3ajvfole2"
       - "ls -al"
 artifacts:
   type: zip
-  base-directory: $CODEBUILD_SRC_DIR/.aws-sam/build/DemoLambda
   files:
-    - '**/*'
+    - packaged.yaml
+    - appspec.yml
